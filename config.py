@@ -11,7 +11,7 @@ load_dotenv()
 TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "7674845797:AAFc9pErEgOsfOO4qF28kzJrGANXlICL-4g")
 
 #Your API ID from my.telegram.org
-APP_ID = int(os.environ.get("APP_ID", "7674845797"))
+APP_ID = int(os.environ.get("APP_ID", "27294940"))
 
 #Your API Hash from my.telegram.org
 API_HASH = os.environ.get("API_HASH", "67dea18182fcb410bd8c4e1a336d8c9e")
@@ -26,8 +26,8 @@ OWNER_ID = int(os.environ.get("OWNER_ID", "5478765030"))
 PORT = os.environ.get("PORT", "8080")
 
 #Database 
-DB_URI = os.environ.get("DATABASE_URL", "@replica_file_bot")
-DB_NAME = os.environ.get("DATABASE_NAME", "filesharexbot")
+DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://poisondeath1921:N8pGonrmdVx1mzBB@cluster0.3bdouge.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DB_NAME = os.environ.get("DATABASE_NAME", "MongoDB")
 
 #force sub channel id, if you want enable force sub
 FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "4"))
@@ -40,7 +40,7 @@ START_PIC = os.environ.get("START_PIC","https://i.ibb.co/Wpj4Sncw/8f6be0f6b760.j
 START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link.")
 try:
     ADMINS=[]
-    for x in (os.environ.get("ADMINS", "").split()):
+    for x in (os.environ.get("ADMINS", "7038050465").split()):
         ADMINS.append(int(x))
 except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
